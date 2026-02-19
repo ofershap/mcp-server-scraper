@@ -1,0 +1,70 @@
+{
+  "name": "mcp-server-scraper",
+  "version": "1.0.0",
+  "description": "MCP server for web scraping — extract clean markdown, links, and metadata from any URL. Zero auth. Free alternative to Firecrawl.",
+  "type": "module",
+  "bin": {
+    "mcp-server-scraper": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "web-scraping",
+    "scraper",
+    "markdown",
+    "readability",
+    "fetch",
+    "content-extraction",
+    "ai",
+    "llm",
+    "claude",
+    "cursor"
+  ],
+  "author": "Ofer Shapira",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ofershap/mcp-server-scraper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ofershap/mcp-server-scraper/issues"
+  },
+  "homepage": "https://github.com/ofershap/mcp-server-scraper#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "@mozilla/readability": "^0.5.0",
+    "linkedom": "^0.18.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^10.0.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^3.2.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": "eslint --fix",
+    "*.{json,md,yml,yaml}": "prettier --write"
+  }
+}
