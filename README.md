@@ -112,8 +112,7 @@ More MCP servers and developer tools on my [portfolio](https://gitshow.dev/ofers
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-ofershap-blue?logo=linkedin)](https://linkedin.com/in/ofershap)
 [![GitHub](https://img.shields.io/badge/GitHub-ofershap-black?logo=github)](https://github.com/ofershap)
-
-<a href="https://gitshow.dev/ofershap"><img src="https://gitshow.dev/api/og/ofershap" alt="Ofer Shapira developer portfolio - MCP servers, GitHub Actions, TypeScript libraries" width="400"></a>
+[![Portfolio](https://img.shields.io/badge/Portfolio-gitshow.dev-orange)](https://gitshow.dev/ofershap)
 
 ## License
 
