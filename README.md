@@ -6,15 +6,21 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Extract clean, readable content from any URL — markdown text, links, and metadata. Zero auth, zero config. A free, open-source alternative to Firecrawl for docs, blogs, and articles.
+Extract clean, readable content from any URL. Returns markdown text, links, and metadata. No API keys, no config. A free alternative to Firecrawl for scraping docs, blogs, and articles.
 
 ```bash
 npx mcp-server-scraper
 ```
 
-> Works with Claude Desktop, Cursor, VS Code Copilot, and any MCP client. Zero auth — no API keys needed.
+> Works with Claude Desktop, Cursor, VS Code Copilot, and any MCP client. No accounts or API keys needed.
 
-![Demo](assets/demo.gif)
+![MCP server for web scraping, content extraction, and URL metadata](assets/demo.gif)
+
+<sub>Demo built with <a href="https://github.com/ofershap/remotion-readme-kit">remotion-readme-kit</a></sub>
+
+## Why
+
+When you're working with an AI assistant and need to reference a docs page, a blog post, or an API reference, you usually end up copy-pasting content manually. Tools like Firecrawl solve this but require a paid API key. This server does the same thing for free. It fetches a URL, runs it through Mozilla Readability (the same engine behind Firefox Reader View), and returns clean markdown. It works well for server-rendered content like documentation sites, blog posts, and articles. It won't handle JavaScript-heavy SPAs, but for the most common use case of "read this docs page and summarize it," it does the job.
 
 ## Tools
 
@@ -58,24 +64,24 @@ Add to `claude_desktop_config.json`:
 }
 ```
 
-### VS Code Copilot
+### VS Code
 
-Add to your MCP settings (e.g. `mcp.json` or equivalent):
+Add to your MCP settings (e.g. `.vscode/mcp.json`):
 
 ```json
 {
-  "mcpServers": {
-    "scraper": {
-      "command": "npx",
-      "args": ["-y", "mcp-server-scraper"]
+  "mcp": {
+    "servers": {
+      "scraper": {
+        "command": "npx",
+        "args": ["-y", "mcp-server-scraper"]
+      }
     }
   }
 }
 ```
 
 ## Examples
-
-Ask your AI assistant:
 
 - "Scrape the API docs from https://docs.example.com and summarize them"
 - "Extract all links from this page"
@@ -85,7 +91,7 @@ Ask your AI assistant:
 
 ## How it works
 
-Uses [Mozilla Readability](https://github.com/mozilla/readability) (same engine as Firefox Reader View) plus [linkedom](https://github.com/WebReflection/linkedom) for fast HTML parsing in Node. No headless browser needed. Works best with server-rendered pages: docs, blogs, articles, news.
+Uses [Mozilla Readability](https://github.com/mozilla/readability) (the engine behind Firefox Reader View) plus [linkedom](https://github.com/WebReflection/linkedom) for fast HTML parsing in Node. No headless browser needed. Works best with server-rendered pages: docs, blogs, articles, news sites.
 
 ## Development
 
@@ -100,9 +106,9 @@ npm test
 
 **Ofer Shapira**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/ofershap)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat&logo=github&logoColor=white)](https://github.com/ofershap)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-ofershap-blue?logo=linkedin)](https://linkedin.com/in/ofershap)
+[![GitHub](https://img.shields.io/badge/GitHub-ofershap-black?logo=github)](https://github.com/ofershap)
 
 ## License
 
-[MIT](LICENSE) &copy; [Ofer Shapira](https://github.com/ofershap)
+[MIT](LICENSE) © [Ofer Shapira](https://github.com/ofershap)
