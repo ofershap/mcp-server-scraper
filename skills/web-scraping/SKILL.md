@@ -9,13 +9,13 @@ Use this skill to extract clean, readable content from any URL. Returns markdown
 
 ## Available Tools
 
-| Tool | What it does |
-|------|-------------|
-| `scrape_url` | Extract clean text content from a URL (Readability-powered) |
-| `extract_links` | Get all links with href and anchor text |
-| `extract_metadata` | Get title, description, OG tags, canonical, favicon |
-| `search_page` | Search for a query string within the page content |
-| `scrape_multiple` | Batch scrape multiple URLs, get title + excerpt per URL |
+| Tool               | What it does                                                |
+| ------------------ | ----------------------------------------------------------- |
+| `scrape_url`       | Extract clean text content from a URL (Readability-powered) |
+| `extract_links`    | Get all links with href and anchor text                     |
+| `extract_metadata` | Get title, description, OG tags, canonical, favicon         |
+| `search_page`      | Search for a query string within the page content           |
+| `scrape_multiple`  | Batch scrape multiple URLs, get title + excerpt per URL     |
 
 ## Workflow
 
