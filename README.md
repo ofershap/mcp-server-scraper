@@ -18,6 +18,10 @@ npx mcp-server-scraper
 
 <sub>Demo built with <a href="https://github.com/ofershap/remotion-readme-kit">remotion-readme-kit</a></sub>
 
+<a href="https://glama.ai/mcp/servers/ofershap/mcp-server-scraper">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/ofershap/mcp-server-scraper/badge" alt="mcp-server-scraper MCP server" />
+</a>
+
 ## Why
 
 When you're working with an AI assistant and need to reference a docs page, a blog post, or an API reference, you usually end up copy-pasting content manually. Tools like Firecrawl solve this but require a paid API key. This server does the same thing for free. It fetches a URL, runs it through Mozilla Readability (the same engine behind Firefox Reader View), and returns clean markdown. It works well for server-rendered content like documentation sites, blog posts, and articles. It won't handle JavaScript-heavy SPAs, but for the most common use case of "read this docs page and summarize it," it does the job.
