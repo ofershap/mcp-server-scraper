@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ofershap/scraper",
+  "description": "Web scraping MCP — extract clean markdown, links, and metadata from any URL.",
+  "repository": {
+    "url": "https://github.com/ofershap/mcp-server-scraper",
+    "source": "github"
+  },
+  "version": "1.0.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "mcp-server-scraper",
+      "version": "1.0.1",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

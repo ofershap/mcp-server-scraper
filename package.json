@@ -1,6 +1,7 @@
 {
   "name": "mcp-server-scraper",
-  "version": "1.0.0",
+  "mcpName": "io.github.ofershap/scraper",
+  "version": "1.0.1",
   "description": "MCP server for web scraping — extract clean markdown, links, and metadata from any URL. Zero auth. Free alternative to Firecrawl.",
   "type": "module",
   "bin": {
