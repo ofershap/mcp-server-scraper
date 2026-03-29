@@ -32,6 +32,10 @@ When you're working with an AI assistant and need to reference a docs page, a bl
 | `search_page`      | Search for a query string within the page, return matching lines |
 | `scrape_multiple`  | Batch scrape multiple URLs, get title + excerpt per URL          |
 
+## Hosted deployment
+
+A hosted deployment is available on [Fronteir AI](https://fronteir.ai/mcp/ofershap-mcp-server-scraper).
+
 ## Quick Start
 
 ### Cursor
