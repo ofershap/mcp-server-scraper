@@ -5,6 +5,7 @@
 [![CI](https://github.com/ofershap/mcp-server-scraper/actions/workflows/ci.yml/badge.svg)](https://github.com/ofershap/mcp-server-scraper/actions/workflows/ci.yml)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Agent Plugins](https://img.shields.io/badge/Agent_Plugins-1.0.0-0ea5e9.svg)](https://agent-plugins.org)
 
 Extract clean, readable content from any URL. Returns markdown text, links, and metadata. No API keys, no config. A free alternative to Firecrawl for scraping docs, blogs, and articles.
 
@@ -13,6 +14,12 @@ npx mcp-server-scraper
 ```
 
 > Works with Claude Desktop, Cursor, VS Code Copilot, and any MCP client. No accounts or API keys needed.
+
+<p align="center">
+  <a href="https://cursor.com/en/install-mcp?name=scraper&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIm1jcC1zZXJ2ZXItc2NyYXBlciJdfQ=="><img src="https://cursor.com/deeplink/mcp-install-dark.svg" alt="Install in Cursor" height="32" /></a>
+  &nbsp;
+  <a href="vscode:mcp/install?%7B%22name%22%3A%22scraper%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22mcp-server-scraper%22%5D%7D"><img src="https://img.shields.io/badge/Add_to_VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Add to VS Code" /></a>
+</p>
 
 ![MCP server for web scraping, content extraction, and URL metadata](assets/demo.gif)
 
@@ -92,6 +99,36 @@ Add to your MCP settings (e.g. `.vscode/mcp.json`):
 ## How it works
 
 Uses [Mozilla Readability](https://github.com/mozilla/readability) (the engine behind Firefox Reader View) plus [linkedom](https://github.com/WebReflection/linkedom) for fast HTML parsing in Node. No headless browser needed. Works best with server-rendered pages: docs, blogs, articles, news sites.
+
+## Agent Plugins
+
+This repo is an [Agent Plugins](https://agent-plugins.org) 1.0.0 package: `plugin.json`, portable `mcp.json`, and `skills/` ship together with the MCP server.
+
+For Cursor, clone the repo and copy or symlink it to `~/.cursor/plugins/local/mcp-server-scraper`, then reload the window. Skills and MCP show up under Customize > Plugins.
+
+The Cursor and VS Code install buttons above still work: they add the same `npx -y mcp-server-scraper` stdio server as manual JSON.
+
+## FAQ
+
+### What is mcp-server-scraper?
+
+A free MCP server that turns public web pages into clean markdown using Mozilla Readability. No Firecrawl or other scrape API key.
+
+### Does it run JavaScript or SPAs?
+
+No. It fetches HTML and parses it in Node. Use a browser MCP for React dashboards and other client-rendered sites.
+
+### How is this different from Firecrawl?
+
+Firecrawl is a hosted scrape API with billing. This server runs locally via `npx`, costs nothing, and fits doc/blog/article URLs.
+
+### Can I install it as an Agent Plugin in Cursor?
+
+Yes. Use the local plugin path under `~/.cursor/plugins/local/mcp-server-scraper` so the bundled `web-scraping` skill loads with the MCP config.
+
+### Do I need API keys or env vars?
+
+No. Point your MCP client at `npx -y mcp-server-scraper` only.
 
 ## Development
 

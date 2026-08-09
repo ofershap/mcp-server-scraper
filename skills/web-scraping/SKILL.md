@@ -1,6 +1,6 @@
 ---
 name: web-scraping
-description: Extract clean content from URLs via MCP. Use when asked to read web pages, extract links, or get page metadata.
+description: Extract clean content from URLs via MCP. Use when the user asks to scrape a URL, read docs/blog/article pages, summarize a link, extract links, search page text, batch-scrape URLs, or get OG/title metadata without Firecrawl.
 ---
 
 # Web Scraping via MCP
@@ -26,10 +26,17 @@ Use this skill to extract clean, readable content from any URL. Returns markdown
 
 ## Key Patterns
 
-- Uses Mozilla Readability (Firefox Reader View engine) — works best with server-rendered content
-- Does NOT handle JavaScript-heavy SPAs (React apps, dashboards) — use a browser MCP for those
-- `scrape_multiple` returns title + excerpt per URL, not full content — use for surveying
+- Uses Mozilla Readability (Firefox Reader View engine); works best with server-rendered content
+- Does NOT handle JavaScript-heavy SPAs (React apps, dashboards); use a browser MCP for those
+- `scrape_multiple` returns title + excerpt per URL, not full content; use for surveying
 - `search_page` searches within the extracted content, not raw HTML
+
+## Error Scenarios
+
+- Empty or tiny markdown: page may be SPA-only or behind login; try a browser MCP or a direct API doc export
+- HTTP 403/401: site blocks bots; no fix inside this server
+- Timeout or DNS errors: retry with a simpler URL or check network
+- `scrape_multiple` partial failures: inspect per-URL errors in the batch result and scrape successes individually
 
 ## Limitations
 
