@@ -10,11 +10,5 @@
   "homepage": "https://github.com/ofershap/mcp-server-scraper",
   "repository": "https://github.com/ofershap/mcp-server-scraper",
   "license": "MIT",
-  "keywords": [
-    "agent-plugins",
-    "mcp",
-    "scraper",
-    "web-scraping",
-    "readability"
-  ]
+  "keywords": ["agent-plugins", "mcp", "scraper", "web-scraping", "readability"]
 }
